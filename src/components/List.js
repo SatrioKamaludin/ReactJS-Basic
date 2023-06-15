@@ -5,10 +5,8 @@ class List extends Component {
     render(){
         return(
             <div>
-                <h2>{this.props.children}</h2>
-                <h3>{this.props.name}</h3>
-                <h4>{this.props.myBook}</h4>
-                <p>{this.props.test}</p>
+                <h3>{this.props.book}</h3>
+                <h4>{this.props.author}</h4>
             </div>
         )
     }
