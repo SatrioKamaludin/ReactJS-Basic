@@ -1,15 +1,12 @@
 import { Component } from "react";
-import List from "./List";
+import Button from "./Button";
 
 class App extends Component {
-    state = {
-        book: "Chicken Soup for the soul",
-        author: "Bill Wilson"
-    }
     render(){
         return(
             <div>
-                <List book={this.state.book} author={this.state.author}/>
+                <h1>Hello World</h1>
+                <Button color="biru"/>
             </div>
             //<div></div> //Parsing error: Adjacent JSX elements must be wrapped in an enclosing tag.
         )
