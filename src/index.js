@@ -1,15 +1,12 @@
-import React from 'react'
+import React, { StrictMode } from 'react'
 import ReactDOM from 'react-dom'
-
-const App = () => {
-  return(
-    <div>
-      <h1>Hello World</h1>
-    </div>
- )
-}
+import App from './components/App'
 
 ReactDOM.render(
-  <App/>,
+  <StrictMode>
+    <App/>
+  </StrictMode>,
   document.getElementById("root")
 )
+
+//Strictmode digunakan untuk warning jika ada fitur react yang tidak didukung atau tidak dimaintain lagi
