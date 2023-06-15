@@ -3,33 +3,26 @@ import { Component } from "react";
 class App extends Component {
     state = {
         name: "kodeakademia",
-        text: ""
     }
 
-    click = () => {
-        this.setState({
-            name: this.state.text
-        })
-        this.setState({
-            text: ""
-        })
-    }
-    
-    change = e => {
-        this.setState({
-            text: e.target.value
-        })
-    }
     render(){
         return(
             <div>
-                <h1>{this.state.name}</h1>
-                <input type="text" value={this.state.text} onChange={this.change}/>
-                <button onClick={this.click}>Click</button>
+                {/* in class component, we can use state and "this", cannot be done in function component*/}
+                <h1>{this.state.name}</h1> 
             </div>
             //<div></div> //Parsing error: Adjacent JSX elements must be wrapped in an enclosing tag.
         )
     }
 }
+
+// this is a function component, there is no way to use state and "this", unless you're going to use hooks (react 16+)
+// const App = () => {
+//     return(
+//         <div>
+//             <h1>Hello World</h1>
+//         </div>
+//     )
+// }
 
 export default App;
