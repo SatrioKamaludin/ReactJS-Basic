@@ -2,18 +2,30 @@ import { Component } from "react";
 
 class App extends Component {
     state = {
-        name: "kodeakademia"
+        name: "kodeakademia",
+        text: ""
     }
-    change = () => {
+
+    click = () => {
         this.setState({
-            name: "kode"
+            name: this.state.text
+        })
+        this.setState({
+            text: ""
+        })
+    }
+    
+    change = e => {
+        this.setState({
+            text: e.target.value
         })
     }
     render(){
         return(
             <div>
                 <h1>{this.state.name}</h1>
-                <button onClick={this.change}>Click this to change kodeakademia to kode</button>
+                <input type="text" value={this.state.text} onChange={this.change}/>
+                <button onClick={this.click}>Click</button>
             </div>
             //<div></div> //Parsing error: Adjacent JSX elements must be wrapped in an enclosing tag.
         )
